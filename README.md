@@ -23,7 +23,7 @@
 - [Usage](#usage)
   - [Via config like `.remarkrc`](#via-config-like-remarkrc)
   - [Via ESLint(recommended)](#via-eslintrecommended)
-  - [Via [remark-cli][]](#via-remark-cli)
+  - [Via remark-cli](#via-remark-cli)
   - [Via Node API](#via-node-api)
 
 ## Disabled remark-lint plugins
@@ -116,7 +116,7 @@ Please use _[eslint-mdx][]_ which works perfectly with [ESLint][] and [Remark][]
 }
 ```
 
-### Via [remark-cli][]
+### Via remark-cli
 
 ```sh
 remark . --use preset-lint-consistent preset-lint-markdown-style-guide preset-lint-recommended preset-prettier
@@ -145,4 +145,3 @@ console.log(report(file))
 [eslint]: https://eslint.org
 [eslint-mdx]: https://github.com/rx-ts/eslint-mdx
 [remark]: https://github.com/remarkjs/remark
-[remark-cli]: https://github.com/remarkjs/remark/tree/master/packages/remark-cli

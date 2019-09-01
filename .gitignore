@@ -1,0 +1,4 @@
+*.log
+*.tsbuildinfo
+lib
+node_modules

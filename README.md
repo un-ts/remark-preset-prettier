@@ -91,6 +91,8 @@ npm i -D remark-preset-prettier
 
 ### Via ESLint(recommended)
 
+Please use _[eslint-mdx][]_ which works perfectly with [ESLint][] and [Remark][] both together.
+
 ```jsonc
 {
   "extends": "plugin:mdx/recommended",
@@ -120,8 +122,6 @@ npm i -D remark-preset-prettier
 remark . --use preset-lint-consistent preset-lint-markdown-style-guide preset-lint-recommended preset-prettier
 ```
 
-[remark-cli]: https://github.com/remarkjs/remark/tree/master/packages/remark-cli
-
 ### Via Node API
 
 ```js
@@ -141,3 +141,8 @@ const file = remark()
 
 console.log(report(file))
 ```
+
+[eslint]: https://eslint.org
+[eslint-mdx]: https://github.com/rx-ts/eslint-mdx
+[remark]: https://github.com/remarkjs/remark
+[remark-cli]: https://github.com/remarkjs/remark/tree/master/packages/remark-cli

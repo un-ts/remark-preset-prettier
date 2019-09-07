@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/JounQin/remark-preset-prettier/compare/v0.1.1...v0.2.0) (2019-09-07)
+
+
+### Features
+
+* simplify implement by reduce, test with preset-lint-consistent too ([9122f95](https://github.com/JounQin/remark-preset-prettier/commit/9122f95))
+
 ### [0.1.1](https://github.com/JounQin/remark-preset-prettier/compare/v0.1.0...v0.1.1) (2019-09-01)
 
 

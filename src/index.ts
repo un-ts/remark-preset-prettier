@@ -1,8 +1,6 @@
 import { Plugin } from 'unified'
 
-export const plugins: Array<[Plugin, false]> = []
-
-const remarkLintPlugins = [
+export const plugins = [
   'blank-lines-1-0-2',
   'blockquote-indentation',
   'books-links',
@@ -38,9 +36,7 @@ const remarkLintPlugins = [
   'table-pipe-alignment',
   'table-pipes',
   'unordered-list-marker-style',
-]
-
-remarkLintPlugins.forEach(plugin => {
+].reduce<Array<[Plugin, false]>>((plugins, plugin) => {
   try {
     plugins.push([
       // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -48,4 +44,5 @@ remarkLintPlugins.forEach(plugin => {
       false,
     ])
   } catch (e) {}
-})
+  return plugins
+}, [])

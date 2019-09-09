@@ -16,10 +16,10 @@
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     babel-preset-proposal-typescript "^1.3.0"
 
-"@1stg/eslint-config@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@1stg/eslint-config/-/eslint-config-0.9.0.tgz#d0c0e4522c97c57647187139836eb0003c64134e"
-  integrity sha512-YU2hLbbDvR3ovPwFWPgoT6F/0UrY7AqstO1xZDLuiZtLZW7fd8Hm/OatEzea2R8ad3D+o7D/NrrNH7T+FZtOeQ==
+"@1stg/eslint-config@^0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@1stg/eslint-config/-/eslint-config-0.9.1.tgz#9a4ba1a80cc609c6a0788613c3244378fb8b1529"
+  integrity sha512-oXIj5Ytktvbr/71e4nVUaMxL9rCs9yUZO6yyOYje41wJVALBdXhxbJLZN9sOGXTap+3wRKtqhckk7anYA3qo8Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.1.0"
     "@typescript-eslint/eslint-plugin-tslint" "^2.1.0"
@@ -29,12 +29,12 @@
     eslint-config-standard "^14.1.0"
     eslint-config-standard-jsx "^8.1.0"
     eslint-config-standard-react "^9.2.0"
-    eslint-import-resolver-typescript JounQin/eslint-import-resolver-typescript#feat/resolve_dts
+    eslint-import-resolver-typescript "github:JounQin/eslint-import-resolver-typescript#feat/resolve_dts"
     eslint-plugin-babel "^5.3.0"
     eslint-plugin-compat "^3.3.0"
     eslint-plugin-import "^2.18.2"
     eslint-plugin-jest "^22.17.0"
-    eslint-plugin-mdx "^1.4.2"
+    eslint-plugin-mdx "^1.4.3"
     eslint-plugin-node "^10.0.0"
     eslint-plugin-prettier "^3.1.0"
     eslint-plugin-promise "^4.2.1"
@@ -2305,8 +2305,9 @@ eslint-import-resolver-node@^0.3.2:
     debug "^2.6.9"
     resolve "^1.5.0"
 
-eslint-import-resolver-typescript@JounQin/eslint-import-resolver-typescript#feat/resolve_dts:
+"eslint-import-resolver-typescript@github:JounQin/eslint-import-resolver-typescript#feat/resolve_dts":
   version "1.1.1"
+  uid "23e2e8cf71ee6c19da9f55e85b2ab34543d2a12e"
   resolved "https://codeload.github.com/JounQin/eslint-import-resolver-typescript/tar.gz/23e2e8cf71ee6c19da9f55e85b2ab34543d2a12e"
   dependencies:
     debug "^4.0.1"
@@ -2383,7 +2384,7 @@ eslint-plugin-jest@^22.17.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^1.13.0"
 
-eslint-plugin-mdx@^1.4.2:
+eslint-plugin-mdx@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-mdx/-/eslint-plugin-mdx-1.4.3.tgz#ea38ef3049aab36c84ff6258a46b048ee0b51998"
   integrity sha512-9L6nB0VjLutrR8lII1sXZg0fSLPOKA7EJ0AhLYEvQung/2/ghZ0mMwTVmSiOdXzAA6sSkZbE0Yi3vPsSTesIDA==
@@ -4869,7 +4870,6 @@ remark-preset-lint-recommended@^3.0.3:
 
 "remark-preset-prettier@link:src":
   version "0.0.0"
-  uid ""
 
 remark-stringify@^7.0.2:
   version "7.0.3"

@@ -2,7 +2,6 @@
   "extends": "@1stg/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "lib",
-    "target": "es2015"
+    "outDir": "lib"
   }
 }

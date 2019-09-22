@@ -16,10 +16,10 @@
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     babel-preset-proposal-typescript "^1.4.1"
 
-"@1stg/eslint-config@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@1stg/eslint-config/-/eslint-config-0.11.0.tgz#1d266eb71d15c4bbb49a2c79b14524c9d3b9f977"
-  integrity sha512-dax6IRao+DLhfGwDDrPy92jM6aYHcgZJtG2/jFUZ24i/euETQgbzVUblJitoTOiqHVI1u37yNBz0vf78bXrs0g==
+"@1stg/eslint-config@^0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@1stg/eslint-config/-/eslint-config-0.11.1.tgz#f1e479c2af187e76bf13e9bfaa33713fbc6f35e3"
+  integrity sha512-V0gXW564ZxM+zkjLHuEAX4BG8TVseOh5OGEJ8XGTXgbe1cC2dqFkNDpbzOvCC7zTXlRkZbNqCVLgRPgoagIHQA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.2.0"
     "@typescript-eslint/eslint-plugin-tslint" "^2.2.0"
@@ -34,7 +34,7 @@
     eslint-plugin-compat "^3.3.0"
     eslint-plugin-import "^2.18.2"
     eslint-plugin-jest "^22.17.0"
-    eslint-plugin-mdx "^1.4.6"
+    eslint-plugin-mdx "^1.5.0"
     eslint-plugin-node "^10.0.0"
     eslint-plugin-prettier "^3.1.0"
     eslint-plugin-promise "^4.2.1"
@@ -2286,10 +2286,10 @@ eslint-import-resolver-ts@^0.3.0:
     resolve "^1.12.0"
     tsconfig-paths "^3.8.0"
 
-eslint-mdx@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/eslint-mdx/-/eslint-mdx-1.4.5.tgz#5341ae8bf77b4afedcb4d2d4983dc0ed11bef4c0"
-  integrity sha512-+J2ODRnyNkxAzU7mLCLFPwF0JMALgSFFtbrpfB8i7t72vx7Lz3gFsPgugkd/ktWjB7Bi9qWeh1vNRs8JnNxTqQ==
+eslint-mdx@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/eslint-mdx/-/eslint-mdx-1.5.2.tgz#49d546856c6333ea5de6a6c1555d8a9a25b734d9"
+  integrity sha512-0UUELtQ++APKR/4NZkHc02yLOX5Y32bP/mtY5hVHihuT2dR5KviSCjK2p8OpJYHJB/jZCmKcpbLu+2/uSNitNA==
   dependencies:
     espree "^6.1.1"
     remark-mdx "^1.4.4"
@@ -2356,13 +2356,13 @@ eslint-plugin-jest@^22.17.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^1.13.0"
 
-eslint-plugin-mdx@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-mdx/-/eslint-plugin-mdx-1.4.6.tgz#c68d5308faa267ddc32f593600c9ff950c86e4f5"
-  integrity sha512-pqeALniX92Fyxq+wIXsZ2Z+KCZIigEmWjR6huXvIHwDkaPIxryOg5fqsqYpQ4IGDrqrkRUJnnWQBaiWK7Jdzgg==
+eslint-plugin-mdx@^1.5.0:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-mdx/-/eslint-plugin-mdx-1.5.2.tgz#cc0478ebeea8543c7f8ffa51c746fc7cd746040c"
+  integrity sha512-1M9GNIAi0dQwJK7KUDeCA2aAnVWZxVBPMYBBhck9ofXVBGSAV/Aqzou8JFMH3z+EnyPhZSLd40I9N6a8Cbi10A==
   dependencies:
     cosmiconfig "^5.2.1"
-    eslint-mdx "^1.4.5"
+    eslint-mdx "^1.5.2"
     rebass "^4.0.5"
     remark-mdx "^1.4.4"
     remark-parse "^7.0.1"
@@ -4836,8 +4836,7 @@ remark-preset-lint-recommended@^3.0.3:
     remark-lint-ordered-list-marker-style "^1.0.0"
 
 "remark-preset-prettier@link:./.":
-  version "0.0.0"
-  uid ""
+  version "0.2.0"
 
 remark-stringify@^7.0.3:
   version "7.0.3"

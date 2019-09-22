@@ -12,7 +12,9 @@ before_install:
 
 install: yarn --frozen-lockfile
 
-script: yarn lint
+script:
+  - yarn build
+  - yarn lint
 
 deploy:
   provider: script

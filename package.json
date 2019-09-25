@@ -10,19 +10,19 @@
   },
   "main": "lib/cjs",
   "module": "lib",
-  "fesm5": "lib/esm",
   "es2015": "lib/es2015",
+  "fesm5": "lib/esm",
   "types": "lib",
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "scripts": {
-    "prelint": "r",
-    "lint": "eslint . --ext js,md,ts -f friendly",
-    "build:ts": "tsc -b",
+    "build": "run-p build:*",
     "build:bundle": "r",
-    "build": "run-p build:*"
+    "build:ts": "tsc -b",
+    "lint": "eslint . --ext js,md,ts -f friendly",
+    "prelint": "r",
+    "type-coverage": "type-coverage --cache --ignore-catch --detail --ignore-files *.d.ts --strict"
   },
   "peerDependencies": {
     "prettier": ">=1.0.0"
@@ -30,27 +30,28 @@
   "devDependencies": {
     "@1stg/babel-preset": "^0.7.0",
     "@1stg/commitlint-config": "^0.1.0",
-    "@1stg/eslint-config": "^0.12.10",
+    "@1stg/eslint-config": "^0.12.12",
     "@1stg/husky-config": "^0.3.0",
-    "@1stg/lint-staged": "^0.7.4",
-    "@1stg/prettier-config": "^0.2.0",
+    "@1stg/lint-staged": "^0.8.0",
+    "@1stg/prettier-config": "^0.3.1",
     "@1stg/remark-config": "^0.2.1",
-    "@1stg/rollup-config": "^0.9.5",
-    "@1stg/tsconfig": "^0.5.1",
-    "@babel/core": "^7.6.0",
+    "@1stg/rollup-config": "^0.10.4",
+    "@1stg/tsconfig": "^0.6.0",
+    "@babel/core": "^7.6.2",
     "@commitlint/cli": "^8.2.0",
     "eslint": "^6.4.0",
     "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
+    "lint-staged": "^9.3.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "react": "^16.9.0",
     "rimraf": "^3.0.0",
     "rollup": "^1.21.4",
+    "type-coverage": "^2.3.0",
     "typescript": "^3.6.3",
     "unified": "^8.4.0"
   },
-  "resolutions": {
-    "remark-preset-prettier": "link:."
+  "typeCoverage": {
+    "atLeast": 100
   }
 }

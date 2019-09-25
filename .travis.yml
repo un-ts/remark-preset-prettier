@@ -12,9 +12,7 @@ before_install:
 
 install: yarn --frozen-lockfile
 
-script:
-  - yarn build
-  - yarn lint
+script: yarn lint
 
 deploy:
   provider: script
@@ -24,5 +22,5 @@ deploy:
     branch: master
 
 after_script:
-  - yarn add -D @codechecks/client @codechecks/build-size-watcher
+  - yarn add -D @codechecks/client @codechecks/build-size-watcher @codechecks/type-coverage-watcher
   - yarn codechecks

@@ -92,28 +92,11 @@ npm i -D remark-preset-prettier
 
 ### Via ESLint(recommended)
 
-Please use _[eslint-mdx][]_ which works perfectly with [ESLint][] and [Remark][] both together.
+Please use _[eslint-plugin-mdx][]_ which works perfectly with [ESLint][] and [Remark][] both together.
 
 ```jsonc
 {
-  "extends": "plugin:mdx/recommended",
-  "overrides": [
-    {
-      "files": "*.md",
-      "rules": {
-        "prettier/prettier": [
-          2,
-          {
-            "parser": "markdown" // required for `eslint-plugin-prettier`
-          }
-        ]
-      }
-    },
-    {
-      "files": "*.mdx",
-      "extends": ["plugin:mdx/overrides"]
-    }
-  ]
+  "extends": "plugin:mdx/recommended"
 }
 ```
 
@@ -144,5 +127,5 @@ console.log(report(file))
 ```
 
 [eslint]: https://eslint.org
-[eslint-mdx]: https://github.com/rx-ts/eslint-mdx
+[eslint-plugin-mdx]: https://github.com/rx-ts/eslint-mdx
 [remark]: https://github.com/remarkjs/remark

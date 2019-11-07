@@ -38,7 +38,7 @@
     "@1stg/prettier-config": "^0.4.2",
     "@1stg/remark-config": "^0.2.2",
     "@1stg/tsconfig": "^0.6.0",
-    "@babel/core": "^7.6.2",
+    "@babel/core": "^7.7.2",
     "@commitlint/cli": "^8.2.0",
     "@pkgr/rollup": "^0.2.4",
     "eslint": "^6.5.1",

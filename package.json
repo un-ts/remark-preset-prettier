@@ -51,7 +51,7 @@
     "rollup": "^1.23.1",
     "type-coverage": "^2.3.0",
     "typescript": "^3.6.3",
-    "unified": "^8.4.1"
+    "unified": "^8.4.2"
   },
   "typeCoverage": {
     "atLeast": 100

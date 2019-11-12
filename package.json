@@ -48,7 +48,7 @@
     "prettier": "^1.18.2",
     "react": "^16.10.2",
     "rimraf": "^3.0.0",
-    "rollup": "^1.23.1",
+    "rollup": "^1.27.0",
     "type-coverage": "^2.3.0",
     "typescript": "^3.6.3",
     "unified": "^8.4.1"

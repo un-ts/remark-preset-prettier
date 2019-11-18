@@ -63,13 +63,15 @@
   resolved "https://registry.yarnpkg.com/@1stg/husky-config/-/husky-config-0.3.1.tgz#15dce8efcbedb8f7237098c1a55a7f465260476f"
   integrity sha512-yqxc09tA68DclqCQH1ylemIylaDd/PqEREMwnaecLMAUyU6zHxQkhAVOWR0s877HrGT9B434gEPCxgWbRTDjNA==
 
-"@1stg/lint-staged@^0.8.6":
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/@1stg/lint-staged/-/lint-staged-0.8.6.tgz#d836667e149af90d803963f13e25cfb8a44909cb"
-  integrity sha512-lpSwLWe7zyvLDNoOu6t5kK3/XiAkHKpnXAYRYqIxaumqGujfStb2hALzJSXBfp+6hjnK7/spVhu/gt7/YX1z+A==
+"@1stg/lint-staged@^0.8.12":
+  version "0.8.12"
+  resolved "https://registry.yarnpkg.com/@1stg/lint-staged/-/lint-staged-0.8.12.tgz#e455a835830729eec0cdf5ce1ae2eeb5dac5d8b6"
+  integrity sha512-pybdQmVoBgB/xS+wVUk4SS//4mE3eEykJ8eTELvrBlskKa51AcPaOi8FRRzqPr0Ab5iML2O30yRTsagxIg8ISw==
   dependencies:
-    "@prettier/plugin-pug" "^1.0.4"
-    prettier-plugin-sh "^0.2.0"
+    "@pkgr/utils" "^0.1.2"
+    "@prettier/plugin-pug" "^1.0.5"
+    cross-env "^6.0.3"
+    prettier-plugin-sh "^0.2.1"
     prettier-plugin-toml "^0.3.1"
 
 "@1stg/prettier-config@^0.4.2":
@@ -1340,12 +1342,29 @@
   resolved "https://registry.yarnpkg.com/@pkgr/umd-globals/-/umd-globals-0.3.0.tgz#ba82ddc4b6c2f864b4635fa8a6257f65f57b40b3"
   integrity sha512-tnSeL23iFiqgmN6ISWG5cTJ/Cv7Kol81MolfPowYj63rAtEXyr0p1uHBXxFWUyM7WNUGJSUw98xdOdTzh1+BaQ==
 
+"@pkgr/utils@^0.1.2":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@pkgr/utils/-/utils-0.1.4.tgz#6391f367a2811d842d98a175d9b77fbc27445ca0"
+  integrity sha512-VGjovf2JHPpv6NY+zZmLRnLxfqFChZ5StuidjWWRott6+9sNu2aId9/kiiL0nqcd1G9XZVIKLAdNHvNXC5vWrg==
+  dependencies:
+    chalk "^2.4.2"
+    cross-spawn "^7.0.1"
+    open "^7.0.0"
+    tslib "^1.10.0"
+
 "@prettier/plugin-pug@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-1.0.4.tgz#13adc5aab2d99db42b68ac43f678c8803916ee95"
   integrity sha512-EXy486byBalEdVUM5KynFazQ0Ay0tiRjAqS/4Pg9zU/4/e/dALSq9YUJdwdnHKo96iwqiEJfpgQnPg/Wg4Wm/A==
   dependencies:
     prettier "~1.18.2"
+    pug-lexer "~4.1.0"
+
+"@prettier/plugin-pug@^1.0.5":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-1.0.10.tgz#3ae2b8cf5f9ca423fbfbad989dc2528e141f37d8"
+  integrity sha512-1syMMM/Mz1J8hHxaH7Q9cRHHihQDm0gMYe+hlOcXnlrLepi3n5hs0MtvfG6K5Hnwj33Zi1r62r/Abq6HALH/Ng==
+  dependencies:
     pug-lexer "~4.1.0"
 
 "@rxts/rollup-plugin-alias@^0.1.0-beta":
@@ -2272,6 +2291,13 @@ cosmiconfig@^5.0.0, cosmiconfig@^5.2.0, cosmiconfig@^5.2.1:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+cross-env@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-6.0.3.tgz#4256b71e49b3a40637a0ce70768a6ef5c72ae941"
+  integrity sha512-+KqxF6LCvfhWvADcDPqo64yVIB31gv/jQulX2NGzKS/g3GEVz6/pt4wjHFtFWsHMddebWD/sDthJemzM4MaAag==
+  dependencies:
+    cross-spawn "^7.0.0"
+
 cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
@@ -2282,6 +2308,15 @@ cross-spawn@^6.0.0, cross-spawn@^6.0.5:
     semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
+
+cross-spawn@^7.0.0, cross-spawn@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.1.tgz#0ab56286e0f7c24e153d04cc2aa027e43a9a5d14"
+  integrity sha512-u7v4o84SwFpD32Z8IIcPZ6z1/ie24O6RU3RbtL5Y316l3KuHVPx9ItBgWQ6VlfAFnRnTtMUrsQ9MUUTuEZjogg==
+  dependencies:
+    path-key "^3.1.0"
+    shebang-command "^2.0.0"
+    which "^2.0.1"
 
 css-color-names@0.0.4, css-color-names@^0.0.4:
   version "0.0.4"
@@ -3696,6 +3731,11 @@ is-word-character@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-word-character/-/is-word-character-1.0.3.tgz#264d15541cbad0ba833d3992c34e6b40873b08aa"
   integrity sha512-0wfcrFgOOOBdgRNT9H33xe6Zi6yhX/uoc4U8NBZGeQQB0ctU1dnlNTyL9JM2646bHDTpsDm1Brb3VPoCIMrd/A==
 
+is-wsl@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-2.1.1.tgz#4a1c152d429df3d441669498e2486d3596ebaf1d"
+  integrity sha512-umZHcSrwlDHo2TGMXv0DZ8dIUGunZ2Iv68YZnrmCiBPkZ4aaOhtv7pXJKeki9k3qJ3RJr0cDyitcl5wEH3AYog==
+
 isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -4370,6 +4410,13 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
+open@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-7.0.0.tgz#7e52999b14eb73f90f0f0807fe93897c4ae73ec9"
+  integrity sha512-K6EKzYqnwQzk+/dzJAQSBORub3xlBTxMz+ntpZpH/LyCa1o6KjXhuN+2npAaI9jaSmU3R1Q8NWf4KUWcyytGsQ==
+  dependencies:
+    is-wsl "^2.1.0"
+
 opencollective-postinstall@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
@@ -4521,7 +4568,7 @@ path-key@^2.0.0, path-key@^2.0.1:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
 
-path-key@^3.0.0:
+path-key@^3.0.0, path-key@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-3.1.0.tgz#99a10d870a803bdd5ee6f0470e58dfcd2f9a54d3"
   integrity sha512-8cChqz0RP6SHJkMt48FW0A7+qUOn+OsnOsVtzI59tZ8m+5bCSk7hzwET0pulwOM2YMn9J1efb07KB9l9f30SGg==
@@ -4967,6 +5014,13 @@ prettier-plugin-sh@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/prettier-plugin-sh/-/prettier-plugin-sh-0.2.0.tgz#9f61d642fa4b20e2bf02cbb94dcfa23dfdbf66e4"
   integrity sha512-apDAJO78kpnZ/oJ0NmdiEmd7+gnReomdPKvvucejRG6CUrEezWNB9oNyNIKacm6UuGHs2u9YShVY04sr0UFfVw==
+  dependencies:
+    mvdan-sh "^0.4.0"
+
+prettier-plugin-sh@^0.2.1:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-sh/-/prettier-plugin-sh-0.2.3.tgz#6ab2557f42517bf9561054654de8f021ec3ac481"
+  integrity sha512-DCgWB9Ux5NfpYwZs5hPIWTHJ/Ee5ClCm4MXvlArWXQoXZ0JJh2DerklYANnKl5sUijpKZmFnQPvUaArXw8OJkw==
   dependencies:
     mvdan-sh "^0.4.0"
 
@@ -6188,10 +6242,22 @@ shebang-command@^1.2.0:
   dependencies:
     shebang-regex "^1.0.0"
 
+shebang-command@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
+  integrity sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==
+  dependencies:
+    shebang-regex "^3.0.0"
+
 shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
+
+shebang-regex@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
+  integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
 shell-quote@^1.6.1:
   version "1.7.2"
@@ -6896,6 +6962,13 @@ which@^1.2.9:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   integrity sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==
+  dependencies:
+    isexe "^2.0.0"
+
+which@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/which/-/which-2.0.1.tgz#f1cf94d07a8e571b6ff006aeb91d0300c47ef0a4"
+  integrity sha512-N7GBZOTswtB9lkQBZA4+zAXrjEIWAUOB93AvzUiudRzRxhUdLURQ7D/gAIMY1gatT/LTbmbcv8SiYazy3eYB7w==
   dependencies:
     isexe "^2.0.0"
 

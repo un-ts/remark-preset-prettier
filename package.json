@@ -37,7 +37,7 @@
     "@1stg/lint-staged": "^0.8.6",
     "@1stg/prettier-config": "^0.4.2",
     "@1stg/remark-config": "^0.2.2",
-    "@1stg/tsconfig": "^0.6.0",
+    "@1stg/tsconfig": "^0.6.1",
     "@babel/core": "^7.6.2",
     "@commitlint/cli": "^8.2.0",
     "@pkgr/rollup": "^0.2.4",

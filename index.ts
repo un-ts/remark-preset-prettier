@@ -1,5 +1,3 @@
-import { Plugin } from 'unified'
-
 export const plugins = [
   'blank-lines-1-0-2',
   'blockquote-indentation',
@@ -36,7 +34,7 @@ export const plugins = [
   'table-pipe-alignment',
   'table-pipes',
   'unordered-list-marker-style',
-].reduce<Array<[Plugin, false]>>((plugins, plugin) => {
+].reduce<Array<[import('unified').Plugin, false]>>((plugins, plugin) => {
   try {
     plugins.push([
       // eslint-disable-next-line @typescript-eslint/no-require-imports

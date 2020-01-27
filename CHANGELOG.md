@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/JounQin/remark-preset-prettier/compare/v0.3.0...v0.4.0) (2020-01-27)
+
+
+### Bug Fixes
+
+* revert retextPlugins, add notice about retext-sentence-spacing ([0cdcd18](https://github.com/JounQin/remark-preset-prettier/commit/0cdcd186dcbd4c73c39a454dfe24de37c61a55d8))
+
 ## [0.3.0](https://github.com/JounQin/remark-preset-prettier/compare/v0.2.2...v0.3.0) (2020-01-27)
 
 

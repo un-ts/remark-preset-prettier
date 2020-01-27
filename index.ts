@@ -1,7 +1,4 @@
-const pluginMapper = (prefix: string) => (plugin: string) =>
-  [prefix, plugin].join('-')
-
-export const remarkLintPlugins = [
+export const plugins = [
   'blank-lines-1-0-2',
   'blockquote-indentation',
   'books-links',
@@ -37,21 +34,13 @@ export const remarkLintPlugins = [
   'table-pipe-alignment',
   'table-pipes',
   'unordered-list-marker-style',
-].map(pluginMapper('remark-lint'))
-
-export const retextPlugins = ['quotes', 'sentence-spacing'].map(
-  pluginMapper('retext'),
-)
-
-export const plugins = remarkLintPlugins
-  .concat(retextPlugins)
-  .reduce<Array<[import('unified').Plugin, false]>>((plugins, plugin) => {
-    try {
-      plugins.push([
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        require(plugin),
-        false,
-      ])
-    } catch (e) {}
-    return plugins
-  }, [])
+].reduce<Array<[import('unified').Plugin, false]>>((plugins, plugin) => {
+  try {
+    plugins.push([
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      require('remark-lint-' + plugin),
+      false,
+    ])
+  } catch (e) {}
+  return plugins
+}, [])

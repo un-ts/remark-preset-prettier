@@ -15,7 +15,7 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![codechecks.io](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
 
-> Turns off all rules that are unnecessary or might conflict with Prettier.
+> Turns off all rules that are unnecessary or might conflict with [Prettier][].
 
 ## TOC <!-- omit in toc -->
 
@@ -26,6 +26,9 @@
   - [Via ESLint(recommended)](#via-eslintrecommended)
   - [Via remark-cli](#via-remark-cli)
   - [Via Node API](#via-node-api)
+- [[remark-retext][] issue](#remark-retext-issue)
+- [Changelog](#changelog)
+- [License](#license)
 
 ## Disabled remark-lint plugins
 
@@ -126,6 +129,49 @@ const file = remark()
 console.log(report(file))
 ```
 
+## [remark-retext][] issue
+
+[retext-sentence-spacing][] is a plugin of [retext][], and [remark-retext][] makes it possible to use [retext][] plugins together with [remark][], and [retext-sentence-spacing][] may conflict with [Prettier][].
+
+However, [remark-retext][] can only be enabled once what means we can not simply disable rule [retext-sentence-spacing][] in this preset which is actually meaningless.
+
+If you do have problems between [retext-sentence-spacing][] and [Prettier][], you have to override the whole configuration of [remark-retext][] like following:
+
+```js
+// .remarkrc.js
+const wooorm = require('retext-preset-wooorm')
+
+module.exports = {
+  plugins: [
+    'preset-wooorm', // other preset(s) or plugin(s)
+    'preset-prettier',
+    [
+      'retext',
+      unified()
+        .use(wooorm) // retext preset(s)
+        .use({
+          plugins: [[require('retext-sentence-spacing'), false]],
+        }),
+    ],
+  ],
+}
+```
+
+## Changelog
+
+Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).
+
+## License
+
+[MIT][] © [JounQin][]@[1stG.me][]
+
+[1stg.me]: https://www.1stg.me
 [eslint]: https://eslint.org
 [eslint-plugin-mdx]: https://github.com/rx-ts/eslint-mdx
+[jounqin]: https://GitHub.com/JounQin
+[mit]: http://opensource.org/licenses/MIT
+[prettier]: https://prettier.io
 [remark]: https://github.com/remarkjs/remark
+[remark-retext]: https://github.com/remarkjs/remark-retext
+[retext]: https://github.com/retextjs/retext
+[retext-sentence-spacing]: https://github.com/retextjs/retext-sentence-spacing

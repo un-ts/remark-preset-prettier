@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/JounQin/remark-preset-prettier/compare/v0.2.2...v0.3.0) (2020-01-27)
+
+
+### Features
+
+* disable style related retext plugins ([dab8e70](https://github.com/JounQin/remark-preset-prettier/commit/dab8e70d2a559b5042553f7c87c7f522cb1de854))
+
 ### [0.2.2](https://github.com/JounQin/remark-preset-prettier/compare/v0.2.1...v0.2.2) (2019-09-25)
 
 ### [0.2.1](https://github.com/JounQin/remark-preset-prettier/compare/v0.2.0...v0.2.1) (2019-09-22)

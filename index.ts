@@ -41,6 +41,6 @@ export const plugins = [
       require('remark-lint-' + plugin),
       false,
     ])
-  } catch (e) {}
+  } catch {}
   return plugins
 }, [])

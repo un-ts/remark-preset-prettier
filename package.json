@@ -37,7 +37,7 @@
     "typescript": "^3.8.3"
   },
   "resolutions": {
-    "@babel/core": "^7.8.7"
+    "@babel/core": "^7.9.0"
   },
   "typeCoverage": {
     "atLeast": 100

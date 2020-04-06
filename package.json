@@ -28,7 +28,7 @@
     "type-coverage": "type-coverage --cache --detail --ignore-catch --ignore-files '**/*.d.ts' --strict"
   },
   "peerDependencies": {
-    "prettier": ">=1.0.0"
+    "prettier": ">=2.0.4"
   },
   "devDependencies": {
     "@1stg/lib-config": "^0.4.4",

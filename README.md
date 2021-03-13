@@ -26,7 +26,7 @@
   - [Via ESLint(recommended)](#via-eslintrecommended)
   - [Via remark-cli](#via-remark-cli)
   - [Via Node API](#via-node-api)
-- [[remark-retext][] issue](#remark-retext-issue)
+- [remark-retext issue](#remark-retext-issue)
 - [Changelog](#changelog)
 - [License](#license)
 

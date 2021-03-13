@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/JounQin/remark-preset-prettier/compare/v0.4.0...v0.4.1) (2021-03-13)
+
+
+### Bug Fixes
+
+* remove unexpected dependencies after upgrading deps ([458c23d](https://github.com/JounQin/remark-preset-prettier/commit/458c23dcb094c38acc0ce02315d73ea7883e30c4))
+
 ## [0.4.0](https://github.com/JounQin/remark-preset-prettier/compare/v0.3.0...v0.4.0) (2020-01-27)
 
 

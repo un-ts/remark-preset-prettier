@@ -1,6 +1,7 @@
 {
   "name": "remark-preset-prettier",
   "version": "0.5.0",
+  "type": "module",
   "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
   "repository": "git@github.com:JounQin/remark-preset-prettier.git",
   "author": "JounQin <admin@1stg.me>",
@@ -8,7 +9,6 @@
   "engines": {
     "node": ">=12"
   },
-  "main": "lib/cjs",
   "module": "lib",
   "exports": {
     "import": "./lib/index.js",
@@ -21,13 +21,13 @@
   ],
   "scripts": {
     "build": "run-p build:*",
-    "build:r": "r -f cjs",
+    "build:r": "r -f cjs -e named",
     "build:ts": "tsc -b",
     "dedup": "yarn-deduplicate --strategy fewer",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc --noEmit",
-    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
+    "prepare": "patch-package && simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "prerelease": "yarn build",
     "release": "changeset publish",
     "typecov": "type-coverage"
@@ -39,10 +39,10 @@
     "@1stg/lib-config": "^3.0.0",
     "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.16.0",
+    "patch-package": "^6.4.7",
     "type-coverage": "^2.18.0",
     "typescript": "^4.3.5"
   },
-  "esm": "lib/es2010",
   "typeCoverage": {
     "atLeast": 100,
     "cache": true,

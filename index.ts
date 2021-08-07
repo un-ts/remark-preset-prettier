@@ -45,3 +45,5 @@ export const plugins = [
   } catch {}
   return plugins
 }, [])
+
+export default { plugins }

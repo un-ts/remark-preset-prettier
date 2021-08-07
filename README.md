@@ -1,6 +1,6 @@
 # remark-preset-prettier
 
-[![Travis](https://img.shields.io/travis/com/JounQin/remark-preset-prettier.svg)](https://travis-ci.com/JounQin/remark-preset-prettier)
+[![GitHub Actions](https://github.com/JounQin/remark-preset-prettier/workflows/CI/badge.svg)](https://github.com/JounQin/remark-preset-prettier/actions/workflows/ci.yml)
 [![Codacy Grade](https://img.shields.io/codacy/grade/d2f82a40047a4b69bcfc2e8afc73ea83)](https://www.codacy.com/app/JounQin/remark-preset-prettier)
 [![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2FJounQin%2Fremark-preset-prettier%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
 [![npm](https://img.shields.io/npm/v/remark-preset-prettier.svg)](https://www.npmjs.com/package/remark-preset-prettier)

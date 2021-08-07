@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.1
+
+### Patch Changes
+
+- [#60](https://github.com/JounQin/remark-preset-prettier/pull/60) [`b7455ae`](https://github.com/JounQin/remark-preset-prettier/commit/b7455ae4282283a2db0db5cb92620bc2b582e4c5) Thanks [@JounQin](https://github.com/JounQin)! - fix: upgrade @pkgr/rollup, use .cjs for require
+
+* [#58](https://github.com/JounQin/remark-preset-prettier/pull/58) [`9fa3a29`](https://github.com/JounQin/remark-preset-prettier/commit/9fa3a298eb3d80de2c348ad3aa3160f06b27655b) Thanks [@JounQin](https://github.com/JounQin)! - fix: add missing `type: "module"`, use default export
+
 ## 0.5.0
 
 ### Minor Changes

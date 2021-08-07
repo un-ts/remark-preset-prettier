@@ -12,7 +12,7 @@
   "module": "lib",
   "exports": {
     "import": "./lib/index.js",
-    "require": "./lib/cjs.js"
+    "require": "./lib/index.cjs"
   },
   "types": "lib",
   "files": [
@@ -36,9 +36,10 @@
     "prettier": ">=1.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^3.0.0",
+    "@1stg/common-config": "^2.3.1",
     "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.16.0",
+    "@pkgr/rollup": "^2.0.0",
     "patch-package": "^6.4.7",
     "type-coverage": "^2.18.0",
     "typescript": "^4.3.5"

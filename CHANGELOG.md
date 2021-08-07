@@ -6,8 +6,6 @@
 
 - [#56](https://github.com/JounQin/remark-preset-prettier/pull/56) [`264b220`](https://github.com/JounQin/remark-preset-prettier/commit/264b220650a9b36d3801202c9894156b1364e12f) Thanks [@JounQin](https://github.com/JounQin)! - feat: migrate to native esm
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 ### [0.4.1](https://github.com/JounQin/remark-preset-prettier/compare/v0.4.0...v0.4.1) (2021-03-13)
 
 ### Bug Fixes

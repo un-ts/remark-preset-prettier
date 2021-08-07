@@ -6,38 +6,43 @@
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=12"
   },
   "main": "lib/cjs",
   "module": "lib",
-  "es2015": "lib/es2015",
-  "fesm5": "lib/esm",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/cjs.js"
+  },
   "types": "lib",
   "files": [
-    "!*.tsbuildinfo",
-    "lib"
+    "lib",
+    "!lib/*.tsbuildinfo"
   ],
   "scripts": {
     "build": "run-p build:*",
-    "build:r": "r -p",
+    "build:r": "r -f cjs",
     "build:ts": "tsc -b",
     "dedup": "yarn-deduplicate --strategy fewer",
     "lint": "run-p lint:*",
-    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts -f friendly",
+    "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc --noEmit",
-    "prelint": "r",
+    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
+    "prerelease": "yarn build",
+    "release": "changeset publish",
     "typecov": "type-coverage"
   },
   "peerDependencies": {
     "prettier": ">=1.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^1.1.9",
-    "npm-run-all": "^4.1.5",
-    "type-coverage": "^2.16.3",
-    "typescript": "^4.2.3",
-    "yarn-deduplicate": "^3.1.0"
+    "@1stg/lib-config": "^3.0.0",
+    "@changesets/changelog-github": "^0.4.0",
+    "@changesets/cli": "^2.16.0",
+    "type-coverage": "^2.18.0",
+    "typescript": "^4.3.5"
   },
+  "esm": "lib/es2010",
   "typeCoverage": {
     "atLeast": 100,
     "cache": true,

@@ -1,3 +1,8 @@
+import _ from 'module'
+
+const cjsRequire =
+  typeof require === 'undefined' ? _.createRequire(import.meta.url) : require
+
 export const plugins = [
   'blank-lines-1-0-2',
   'blockquote-indentation',
@@ -36,11 +41,7 @@ export const plugins = [
   'unordered-list-marker-style',
 ].reduce<Array<[import('unified').Plugin, false]>>((plugins, plugin) => {
   try {
-    plugins.push([
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      require('remark-lint-' + plugin),
-      false,
-    ])
+    plugins.push([cjsRequire('remark-lint-' + plugin), false])
   } catch {}
   return plugins
 }, [])

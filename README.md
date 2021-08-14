@@ -118,12 +118,12 @@ remark . --use preset-lint-consistent preset-lint-markdown-style-guide preset-li
 ### Via Node API
 
 ```js
-const report = require('vfile-reporter')
-const remark = require('remark')
-const consistent = require('remark-preset-lint-consistent')
-const styleGuide = require('remark-preset-lint-markdown-style-guide')
-const recommended = require('remark-preset-lint-recommended')
-const prettier = require('remark-preset-lint-prettier')
+import report from 'vfile-reporter'
+import remark from 'remark'
+import consistent from 'remark-preset-lint-consistent'
+import styleGuide from 'remark-preset-lint-markdown-style-guide'
+import recommended from 'remark-preset-lint-recommended'
+import prettier from 'remark-preset-lint-prettier'
 
 const file = remark()
   .use(consistent)
@@ -145,9 +145,10 @@ If you do have problems between [retext-sentence-spacing][] and [Prettier][], yo
 
 ```js
 // .remarkrc.js
-const wooorm = require('retext-preset-wooorm')
+import wooorm from 'retext-preset-wooorm'
+import sentenceSpacing from 'retext-sentence-spacing'
 
-module.exports = {
+export default {
   plugins: [
     'preset-wooorm', // other preset(s) or plugin(s)
     'preset-prettier',
@@ -156,7 +157,7 @@ module.exports = {
       unified()
         .use(wooorm) // retext preset(s)
         .use({
-          plugins: [[require('retext-sentence-spacing'), false]],
+          plugins: [[sentenceSpacing, false]],
         }),
     ],
   ],

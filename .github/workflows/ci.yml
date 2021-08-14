@@ -43,7 +43,7 @@ jobs:
 
       - name: Build, Lint and test
         run: |
-          yarn build
+          # `build` is already covered by `lint`
           yarn lint
           yarn typecov
         env:

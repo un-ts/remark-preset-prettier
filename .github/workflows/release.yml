@@ -34,13 +34,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Dependencies
-        # https://github.com/atlassian/changesets/issues/246
-        run: |
-          yarn --frozen-lockfile
-          rm -rf .git/hooks/commit-msg
-
-      - name: Build
-        run: yarn build
+        run: yarn --frozen-lockfile
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
@@ -48,6 +42,8 @@ jobs:
         with:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: yarn release
+          commit: 'chore: release package(s)'
+          title: 'chore: release package(s)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

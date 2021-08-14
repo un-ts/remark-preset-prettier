@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0
+
+### Major Changes
+
+- [#62](https://github.com/JounQin/remark-preset-prettier/pull/62) [`965cdcb`](https://github.com/JounQin/remark-preset-prettier/commit/965cdcb7d91eac8c73dc304ea43ab9f079299d26) Thanks [@JounQin](https://github.com/JounQin)! - feat: support native esm plugins
+
+  If you're not ready for native esm or latest `remark-lint` plugins, please use versions `<1`, see [#61](https://github.com/JounQin/remark-preset-prettier/issues/61) for more details.
+
+  Or you can try something like [`yarn-deduplicate`](https://github.com/atlassian/yarn-deduplicate) with `yarn-deduplicate --strategy fewer` without guarantee.
+
 ## 0.5.1
 
 ### Patch Changes

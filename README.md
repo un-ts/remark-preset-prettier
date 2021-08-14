@@ -123,7 +123,7 @@ import remark from 'remark'
 import consistent from 'remark-preset-lint-consistent'
 import styleGuide from 'remark-preset-lint-markdown-style-guide'
 import recommended from 'remark-preset-lint-recommended'
-import prettier from 'remark-preset-lint-prettier'
+import prettier from 'remark-preset-prettier'
 
 const file = remark()
   .use(consistent)

@@ -1,3 +1,4 @@
 lib
+src/plugins.ts
 CHANGELOG.md
 !/.*.js

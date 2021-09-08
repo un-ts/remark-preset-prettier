@@ -1,6 +1,0 @@
-{
-  "extends": "@1stg",
-  "rules": {
-    "mdx/remark": 0
-  }
-}

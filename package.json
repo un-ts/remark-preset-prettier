@@ -81,7 +81,7 @@
     "@pkgr/rollup": "^2.0.1",
     "@types/node": "^16.7.13",
     "@types/prettier": "^2.3.2",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.8",
     "remark-cli": "^10.0.0",
     "remark-lint": "^9.0.1",
     "remark-preset-lint-consistent": "^5.0.1",

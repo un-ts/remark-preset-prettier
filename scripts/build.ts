@@ -42,12 +42,12 @@ const plugins = [
 ]
 
 const camelCase = (val: string) =>
-  // type-coverage:ignore-next-line -- https://github.com/plantain-00/type-coverage/issues/96
   val.replace(/-([\da-z])/g, ([_, $0]) => $0.toUpperCase())
 
 const main = async () => {
   const pkgPath = path.resolve('package.json')
 
+  // eslint-disable-next-line unicorn/prefer-json-parse-buffer
   const pkg = JSON.parse(await fs.promises.readFile(pkgPath, 'utf8')) as {
     dependencies?: Record<string, string>
   }

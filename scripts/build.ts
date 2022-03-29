@@ -48,6 +48,7 @@ const camelCase = (val: string) =>
 const main = async () => {
   const pkgPath = path.resolve('package.json')
 
+  // eslint-disable-next-line unicorn/prefer-json-parse-buffer
   const pkg = JSON.parse(await fs.promises.readFile(pkgPath, 'utf8')) as {
     dependencies?: Record<string, string>
   }

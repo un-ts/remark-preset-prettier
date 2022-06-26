@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Patch Changes
+
+- [`1895900`](https://github.com/JounQin/remark-preset-prettier/commit/1895900b45826d92b8373bf52c4022118be6ce87) Thanks [@JounQin](https://github.com/JounQin)! - chore: upgrade (dev)Dependencies, update node engine and exports settings
+
 ## 1.0.0
 
 ### Major Changes

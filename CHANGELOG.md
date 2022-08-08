@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### Patch Changes
+
+- [#93](https://github.com/JounQin/remark-preset-prettier/pull/93) [`8149b20`](https://github.com/JounQin/remark-preset-prettier/commit/8149b2039c244441f8be2e64b126a77193e607cc) Thanks [@JounQin](https://github.com/JounQin)! - fix: revert node engines change to `>=12.20` - close #90
+
 ## 1.0.1
 
 ### Patch Changes

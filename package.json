@@ -8,7 +8,7 @@
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": "^12.20 || ^14.18.0 || >=16.0.0"
+    "node": ">=12.20"
   },
   "main": "lib/index.cjs",
   "module": "lib/index.js",
@@ -76,15 +76,16 @@
     "remark-lint-unordered-list-marker-style": "*"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^6.3.0",
-    "@changesets/changelog-github": "^0.4.5",
-    "@changesets/cli": "^2.23.0",
-    "@types/node": "^18.0.0",
-    "@types/prettier": "^2.6.3",
+    "@1stg/lib-config": "^9.0.2",
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.2",
+    "@types/node": "^18.6.4",
+    "@types/prettier": "^2.7.0",
     "patch-package": "^6.4.7",
-    "tsx": "^3.6.0",
-    "type-coverage": "^2.21.2",
-    "typescript": "^4.7.4"
+    "tsx": "^3.8.1",
+    "type-coverage": "^2.22.0",
+    "typescript": "^4.7.4",
+    "yarn-deduplicate": "^5.0.0"
   },
   "typeCoverage": {
     "atLeast": 100,

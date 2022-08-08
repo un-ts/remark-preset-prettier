@@ -42,56 +42,53 @@ const plugins = [
 ]
 
 const camelCase = (val: string) =>
+  // eslint-disable-next-line regexp/no-unused-capturing-group
   val.replace(/-([\da-z])/g, ([_, $0]) => $0.toUpperCase())
 
-const main = async () => {
-  const pkgPath = path.resolve('package.json')
+const pkgPath = path.resolve('package.json')
 
-  const pkg = JSON.parse(await fs.promises.readFile(pkgPath, 'utf8')) as {
-    dependencies?: Record<string, string>
-  }
-
-  await fs.promises.writeFile(
-    pkgPath,
-    prettier.format(
-      JSON.stringify({
-        ...pkg,
-        dependencies: {
-          ...pkg.dependencies,
-          ...plugins.reduce<Record<string, string>>(
-            (acc, plugin) =>
-              Object.assign(acc, {
-                [`remark-lint-${plugin}`]: '*',
-              }),
-            {},
-          ),
-        },
-      }),
-      {
-        filepath: pkgPath,
-      },
-    ),
-  )
-
-  const pluginsPath = path.resolve('src/plugins.ts')
-
-  await fs.promises.writeFile(
-    pluginsPath,
-    prettier.format(
-      [
-        '// @ts-nocheck',
-        ...plugins.map(
-          plugin => `import ${camelCase(plugin)} from 'remark-lint-${plugin}'`,
-        ),
-        `\nexport const plugins: Array<import('unified').Plugin> = [${plugins
-          .map(plugin => camelCase(plugin))
-          .join(',')}]`,
-      ].join('\n'),
-      {
-        filepath: pluginsPath,
-      },
-    ),
-  )
+const pkg = JSON.parse(await fs.promises.readFile(pkgPath, 'utf8')) as {
+  dependencies?: Record<string, string>
 }
 
-main().catch(console.error)
+await fs.promises.writeFile(
+  pkgPath,
+  prettier.format(
+    JSON.stringify({
+      ...pkg,
+      dependencies: {
+        ...pkg.dependencies,
+        ...plugins.reduce<Record<string, string>>(
+          (acc, plugin) =>
+            Object.assign(acc, {
+              [`remark-lint-${plugin}`]: '*',
+            }),
+          {},
+        ),
+      },
+    }),
+    {
+      filepath: pkgPath,
+    },
+  ),
+)
+
+const pluginsPath = path.resolve('src/plugins.ts')
+
+await fs.promises.writeFile(
+  pluginsPath,
+  prettier.format(
+    [
+      '// @ts-nocheck',
+      ...plugins.map(
+        plugin => `import ${camelCase(plugin)} from 'remark-lint-${plugin}'`,
+      ),
+      `\nexport const plugins: Array<import('unified').Plugin> = [${plugins
+        .map(plugin => camelCase(plugin))
+        .join(',')}]`,
+    ].join('\n'),
+    {
+      filepath: pluginsPath,
+    },
+  ),
+)

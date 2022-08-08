@@ -1,4 +1,5 @@
 lib
 src/plugins.ts
 CHANGELOG.md
+!/.github
 !/.*.js

@@ -2,7 +2,7 @@
   "extends": ".",
   "compilerOptions": {
     "outDir": "lib",
-    "rootDir": "src"
+    "rootDir": "."
   },
-  "include": ["src"]
+  "include": ["index.ts"]
 }

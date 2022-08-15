@@ -7,6 +7,7 @@
 [![GitHub release](https://img.shields.io/github/release/remarkjs/remark-preset-prettier)](https://github.com/remarkjs/remark-preset-prettier/releases)
 
 [![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/changesets/changesets)
@@ -31,9 +32,7 @@
 
 ## Notice
 
-If you're not ready for native esm or latest `remark-lint` plugins, please use versions `<1`, see [#61](https://github.com/remarkjs/remark-preset-prettier/issues/61) for more details.
-
-Or you can try something like [`yarn-deduplicate`](https://github.com/atlassian/yarn-deduplicate) with `yarn-deduplicate --strategy fewer` without guarantee.
+If you're not ready for native ESM, top level await or latest `remark-lint` plugins, please use versions `<1`, see [#61](https://github.com/remarkjs/remark-preset-prettier/issues/61) and [#97](https://github.com/remarkjs/remark-preset-prettier/pull/97) for more details.
 
 ## Disabled remark-lint plugins
 

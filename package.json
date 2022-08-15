@@ -40,27 +40,23 @@
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": ">=12.20"
+    "node": ">=14.8"
   },
-  "main": "lib/index.cjs",
-  "module": "lib/index.js",
+  "main": "lib/index.js",
   "exports": {
     "types": "./lib/index.d.ts",
-    "import": "./lib/index.js",
-    "require": "./lib/index.cjs"
+    "import": "./lib/index.js"
   },
   "types": "lib/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "!**/*.tsbuildinfo"
   ],
   "scripts": {
-    "build": "run-p build:*",
-    "build:r": "r -f cjs -e named",
-    "build:ts": "tsc -p tsconfig.lib.json",
+    "build": "tsc -p tsconfig.lib.json",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc --noEmit",
-    "prebuild": "tsx scripts/build.ts",
     "prelint": "yarn build",
     "prepare": "patch-package && simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "prerelease": "yarn build",
@@ -70,54 +66,19 @@
   "peerDependencies": {
     "prettier": ">=1.0.0"
   },
-  "dependencies": {
-    "remark-lint-blank-lines-1-0-2": "*",
-    "remark-lint-blockquote-indentation": "*",
-    "remark-lint-books-links": "*",
-    "remark-lint-checkbox-character-style": "*",
-    "remark-lint-code-block-style": "*",
-    "remark-lint-definition-case": "*",
-    "remark-lint-definition-spacing": "*",
-    "remark-lint-emphasis-marker": "*",
-    "remark-lint-fenced-code-marker": "*",
-    "remark-lint-final-newline": "*",
-    "remark-lint-hard-break-spaces": "*",
-    "remark-lint-heading-style": "*",
-    "remark-lint-heading-whitespace": "*",
-    "remark-lint-link-title-style": "*",
-    "remark-lint-list-item-bullet-indent": "*",
-    "remark-lint-list-item-content-indent": "*",
-    "remark-lint-list-item-indent": "*",
-    "remark-lint-list-item-spacing": "*",
-    "remark-lint-maximum-line-length": "*",
-    "remark-lint-no-blockquote-without-marker": "*",
-    "remark-lint-no-consecutive-blank-lines": "*",
-    "remark-lint-no-heading-content-indent": "*",
-    "remark-lint-no-inline-padding": "*",
-    "remark-lint-no-long-code": "*",
-    "remark-lint-no-table-indentation": "*",
-    "remark-lint-ordered-list-marker-style": "*",
-    "remark-lint-ordered-list-marker-value": "*",
-    "remark-lint-rule-style": "*",
-    "remark-lint-spaces-around-number": "*",
-    "remark-lint-spaces-around-word": "*",
-    "remark-lint-strong-marker": "*",
-    "remark-lint-table-cell-padding": "*",
-    "remark-lint-table-pipe-alignment": "*",
-    "remark-lint-table-pipes": "*",
-    "remark-lint-unordered-list-marker-style": "*"
-  },
   "devDependencies": {
     "@1stg/lib-config": "^9.0.2",
     "@changesets/changelog-github": "^0.4.6",
     "@changesets/cli": "^2.24.2",
-    "@types/node": "^18.6.4",
+    "@types/node": "^18.7.2",
     "@types/prettier": "^2.7.0",
     "patch-package": "^6.4.7",
-    "tsx": "^3.8.1",
     "type-coverage": "^2.22.0",
     "typescript": "^4.7.4",
     "yarn-deduplicate": "^5.0.0"
+  },
+  "resolutions": {
+    "remark-preset-prettier": "link:."
   },
   "typeCoverage": {
     "atLeast": 100,
@@ -126,7 +87,7 @@
     "ignoreAsAssertion": true,
     "ignoreCatch": true,
     "ignoreFiles": [
-      "**/*.d.ts"
+      "lib"
     ],
     "showRelativePath": true,
     "strict": true,

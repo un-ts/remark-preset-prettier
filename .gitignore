@@ -4,4 +4,3 @@
 .type-coverage
 lib
 node_modules
-src/plugins.ts

@@ -1,10 +1,10 @@
 # remark-preset-prettier
 
-[![GitHub Actions](https://github.com/un-ts/remark-preset-prettier/workflows/CI/badge.svg)](https://github.com/un-ts/remark-preset-prettier/actions/workflows/ci.yml)
+[![GitHub Actions](https://github.com/remarkjs/remark-preset-prettier/workflows/CI/badge.svg)](https://github.com/remarkjs/remark-preset-prettier/actions/workflows/ci.yml)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/un-ts/remark-preset-prettier.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/un-ts/remark-preset-prettier/context:javascript)
-[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fun-ts%2Fremark-preset-prettier%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
+[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fremarkjs%2Fremark-preset-prettier%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
 [![npm](https://img.shields.io/npm/v/remark-preset-prettier.svg)](https://www.npmjs.com/package/remark-preset-prettier)
-[![GitHub release](https://img.shields.io/github/release/un-ts/remark-preset-prettier)](https://github.com/un-ts/remark-preset-prettier/releases)
+[![GitHub release](https://img.shields.io/github/release/remarkjs/remark-preset-prettier)](https://github.com/remarkjs/remark-preset-prettier/releases)
 
 [![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -24,12 +24,14 @@
   - [Via remark-cli](#via-remark-cli)
   - [Via Node API](#via-node-api)
 - [remark-retext issue](#remark-retext-issue)
+- [Sponsors](#sponsors)
+- [Backers](#backers)
 - [Changelog](#changelog)
 - [License](#license)
 
 ## Notice
 
-If you're not ready for native esm or latest `remark-lint` plugins, please use versions `<1`, see [#61](https://github.com/un-ts/remark-preset-prettier/issues/61) for more details.
+If you're not ready for native esm or latest `remark-lint` plugins, please use versions `<1`, see [#61](https://github.com/remarkjs/remark-preset-prettier/issues/61) for more details.
 
 Or you can try something like [`yarn-deduplicate`](https://github.com/atlassian/yarn-deduplicate) with `yarn-deduplicate --strategy fewer` without guarantee.
 
@@ -160,6 +162,22 @@ export default {
   ],
 }
 ```
+
+## Sponsors
+
+| 1stG                                                                                                                               | RxTS                                                                                                                               | UnTS                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [![1stG Open Collective backers and sponsors](https://opencollective.com/1stG/organizations.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers and sponsors](https://opencollective.com/rxts/organizations.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers and sponsors](https://opencollective.com/unts/organizations.svg)](https://opencollective.com/unts) |
+
+[![unified Open Collective backers and sponsors](https://opencollective.com/unified/organizations.svg)](https://opencollective.com/unified)
+
+## Backers
+
+| 1stG                                                                                                                             | RxTS                                                                                                                             | UnTS                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [![1stG Open Collective backers and sponsors](https://opencollective.com/1stG/individuals.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers and sponsors](https://opencollective.com/rxts/individuals.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers and sponsors](https://opencollective.com/unts/individuals.svg)](https://opencollective.com/unts) |
+
+[![unified Open Collective backers and sponsors](https://opencollective.com/unified/individuals.svg)](https://opencollective.com/unified)
 
 ## Changelog
 

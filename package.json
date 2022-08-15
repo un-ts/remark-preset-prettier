@@ -67,10 +67,10 @@
     "prettier": ">=1.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^9.0.2",
+    "@1stg/lib-config": "^10.0.0",
     "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.2",
-    "@types/node": "^18.7.2",
+    "@changesets/cli": "^2.24.3",
+    "@types/node": "^18.7.3",
     "@types/prettier": "^2.7.0",
     "patch-package": "^6.4.7",
     "type-coverage": "^2.22.0",

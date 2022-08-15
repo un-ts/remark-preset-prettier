@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+### Major Changes
+
+- [#98](https://github.com/remarkjs/remark-preset-prettier/pull/98) [`837dbac`](https://github.com/remarkjs/remark-preset-prettier/commit/837dbacdf23327f03acbc6020a15f33d15adcea6) Thanks [@JounQin](https://github.com/JounQin)! - feat!: use top level await and pure ESM
+
 ## 1.0.2
 
 ### Patch Changes

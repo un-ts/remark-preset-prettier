@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: yarn --frozen-lockfile
 
-      - name: Build, Lint and test
+      - name: Build, Lint and Test
         run: |
           # `build` is already covered by `lint`
           yarn run-s lint typecov

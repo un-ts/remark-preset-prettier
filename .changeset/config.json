@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "JounQin/remark-preset-prettier"
+      "repo": "un-ts/remark-preset-prettier"
     }
   ],
   "commit": false,

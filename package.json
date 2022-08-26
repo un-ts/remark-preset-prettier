@@ -10,7 +10,7 @@
     "url": "https://opencollective.com/unified"
   },
   "license": "MIT",
-  "packageManager": "npm@8.18.0",
+  "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=14.8"
   },
@@ -38,8 +38,8 @@
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc --emitDeclarationOnly false --noEmit",
-    "prelint": "npm run build",
-    "prepare": "simple-git-hooks",
+    "prelint": "yarn build",
+    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "typecov": "type-coverage"
   },
   "peerDependencies": {
@@ -53,9 +53,9 @@
     "typescript": "^4.8.2",
     "yarn-deduplicate": "^5.0.2"
   },
-  "overrides": {
-    "prettier": ">=1.0.0",
-    "remark-preset-prettier": "file:."
+  "resolutions": {
+    "prettier": "^2.7.1",
+    "remark-preset-prettier": "link:."
   },
   "sideEffects": false,
   "typeCoverage": {

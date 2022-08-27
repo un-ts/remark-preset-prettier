@@ -49,8 +49,8 @@ const _plugins = await Promise.all(
   })
 )
 
-export const plugins = _plugins.filter(Boolean)
+const remarkPresetPrettier = {
+  plugins: _plugins.filter(Boolean)
+}
 
-const pluginsAsObject = {plugins}
-
-export default pluginsAsObject
+export default remarkPresetPrettier

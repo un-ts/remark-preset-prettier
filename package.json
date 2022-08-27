@@ -1,29 +1,8 @@
 {
   "name": "remark-preset-prettier",
   "version": "1.0.2",
-  "type": "module",
-  "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
-  "repository": "git+https://github.com/remarkjs/remark-preset-prettier.git",
-  "author": "JounQin <admin@1stg.me>",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
-  },
+  "description": "remark preset to turn rules off that conflict with prettier",
   "license": "MIT",
-  "packageManager": "yarn@1.22.19",
-  "engines": {
-    "node": ">=14.8"
-  },
-  "main": "index.js",
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./index.js"
-  },
-  "types": "index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js"
-  ],
   "keywords": [
     "unified",
     "remark",
@@ -33,31 +12,55 @@
     "markdown",
     "prettier"
   ],
-  "scripts": {
-    "build": "rimraf *.d.ts && tsc -b && type-coverage",
-    "lint": "run-p lint:*",
-    "lint:es": "eslint . --cache -f friendly",
-    "lint:tsc": "tsc --emitDeclarationOnly false --noEmit",
-    "prelint": "yarn build",
-    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
-    "typecov": "type-coverage"
+  "repository": "remarkjs/remark-preset-prettier",
+  "bugs": "https://github.com/remarkjs/remark-preset-prettier/issues",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
+  },
+  "author": "JounQin <admin@1stg.me>",
+  "contributors": [
+    "JounQin <admin@1stg.me>",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
   },
   "peerDependencies": {
     "prettier": ">=1.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^10.2.1",
-    "@types/node": "^18.7.13",
-    "@types/prettier": "^2.7.0",
-    "type-coverage": "^2.22.0",
-    "typescript": "^4.8.2",
-    "yarn-deduplicate": "^5.0.2"
+    "prettier": "^2.0.0",
+    "type-coverage": "^2.0.0",
+    "typescript": "^4.0.0",
+    "unified": "^10.0.0",
+    "xo": "^0.52.0"
   },
-  "resolutions": {
-    "prettier": "^2.7.1",
-    "remark-preset-prettier": "link:."
+  "scripts": {
+    "build": "rimraf \"*.d.ts\" && tsc && type-coverage",
+    "format": "prettier . -w --loglevel warn && xo --fix",
+    "test": "npm run build && npm run format"
   },
-  "sideEffects": false,
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
+  },
+  "xo": {
+    "prettier": true
+  },
   "typeCoverage": {
     "atLeast": 100,
     "cache": true,

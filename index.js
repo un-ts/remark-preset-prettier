@@ -38,17 +38,19 @@ const _plugins = await Promise.all(
     'table-cell-padding',
     'table-pipe-alignment',
     'table-pipes',
-    'unordered-list-marker-style',
-  ]).map(async pluginName => {
+    'unordered-list-marker-style'
+  ]).map(async (pluginName) => {
     try {
-      const { default: plugin } = /** @type {{ default: Plugin }} */ (
+      const {default: plugin} = /** @type {{ default: Plugin }} */ (
         await import(`remark-lint-${pluginName}`)
       )
       return /** @type {const} */ ([plugin, false])
     } catch {}
-  }),
+  })
 )
 
 export const plugins = _plugins.filter(Boolean)
 
-export default { plugins }
+const pluginsAsObject = {plugins}
+
+export default pluginsAsObject

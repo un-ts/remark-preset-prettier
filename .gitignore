@@ -1,6 +1,7 @@
 *.log
-*.tsbuildinfo
 .*cache
 .type-coverage
-lib
 node_modules
+/index.d.ts
+/pnpm-lock.yaml
+/yarn.lock

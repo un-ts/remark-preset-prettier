@@ -1,8 +1,0 @@
-{
-  "extends": ".",
-  "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "."
-  },
-  "include": ["index.ts"]
-}

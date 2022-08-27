@@ -1,18 +1,14 @@
 # remark-preset-prettier
 
-[![GitHub Actions](https://github.com/remarkjs/remark-preset-prettier/workflows/CI/badge.svg)](https://github.com/remarkjs/remark-preset-prettier/actions/workflows/ci.yml)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/un-ts/remark-preset-prettier.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/un-ts/remark-preset-prettier/context:javascript)
-[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fremarkjs%2Fremark-preset-prettier%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
-[![npm](https://img.shields.io/npm/v/remark-preset-prettier.svg)](https://www.npmjs.com/package/remark-preset-prettier)
-[![GitHub release](https://img.shields.io/github/release/remarkjs/remark-preset-prettier)](https://github.com/remarkjs/remark-preset-prettier/releases)
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
+[![Sponsors][sponsors-badge]][collective]
+[![Backers][backers-badge]][collective]
+[![Chat][chat-badge]][chat]
 
-[![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/changesets/changesets)
-
-> Turns off all rules that are unnecessary or might conflict with [Prettier][].
+Turns off all **[remark][]** rules that are unnecessary or might conflict with [Prettier][].
 
 ## TOC <!-- omit in toc -->
 
@@ -25,9 +21,10 @@
   - [Via remark-cli](#via-remark-cli)
   - [Via Node API](#via-node-api)
 - [remark-retext issue](#remark-retext-issue)
-- [Sponsors](#sponsors)
-- [Backers](#backers)
+- [Types](#types)
+- [Compatibility](#compatibility)
 - [Changelog](#changelog)
+- [Contribute](#contribute)
 - [License](#license)
 
 ## Notice
@@ -162,25 +159,36 @@ export default {
 }
 ```
 
-## Sponsors
+## Types
 
-| 1stG                                                                                                                               | RxTS                                                                                                                               | UnTS                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [![1stG Open Collective backers and sponsors](https://opencollective.com/1stG/organizations.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers and sponsors](https://opencollective.com/rxts/organizations.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers and sponsors](https://opencollective.com/unts/organizations.svg)](https://opencollective.com/unts) |
+This package is fully typed with [TypeScript][].
+It exports `default` and `plugins` symbols which are same, and `Plugin` type
+from `unified`, which specify the interfaces of the accepted options.
 
-[![unified Open Collective backers and sponsors](https://opencollective.com/unified/organizations.svg)](https://opencollective.com/unified)
+## Compatibility
 
-## Backers
+Projects maintained by the unified collective are compatible with all maintained
+versions of Node.js.
+As of now, that is Node.js 14.8+ (Which requires `top level await` support), 16.0+, and 18.0+.
+Our projects sometimes work with older versions, but this is not guaranteed.
 
-| 1stG                                                                                                                             | RxTS                                                                                                                             | UnTS                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [![1stG Open Collective backers and sponsors](https://opencollective.com/1stG/individuals.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers and sponsors](https://opencollective.com/rxts/individuals.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers and sponsors](https://opencollective.com/unts/individuals.svg)](https://opencollective.com/unts) |
-
-[![unified Open Collective backers and sponsors](https://opencollective.com/unified/individuals.svg)](https://opencollective.com/unified)
+This plugin works with `unified` version 6+, `remark-parse` version 3+ (used in
+`remark` version 7), and `rehype-stringify` version 3+ (used in `rehype`
+version 5).
 
 ## Changelog
 
 Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).
+
+## Contribute
+
+See [`contributing.md`][contributing] in [`remarkjs/.github`][health] for ways
+to get started.
+See [`support.md`][support] for ways to get help.
+
+This project has a [code of conduct][coc].
+By interacting with this repository, organization, or community you agree to
+abide by its terms.
 
 ## License
 
@@ -188,7 +196,7 @@ Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.m
 
 [1stg.me]: https://www.1stg.me
 [eslint]: https://eslint.org
-[eslint-plugin-mdx]: https://github.com/rx-ts/eslint-mdx
+[eslint-plugin-mdx]: https://github.com/mdx-js/eslint-mdx
 [jounqin]: https://GitHub.com/JounQin
 [mit]: http://opensource.org/licenses/MIT
 [prettier]: https://prettier.io
@@ -196,3 +204,21 @@ Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.m
 [remark-retext]: https://github.com/remarkjs/remark-retext
 [retext]: https://github.com/retextjs/retext
 [retext-sentence-spacing]: https://github.com/retextjs/retext-sentence-spacing
+[build-badge]: https://github.com/remarkjs/remark-preset-prettier/workflows/main/badge.svg
+[build]: https://github.com/remarkjs/remark-preset-prettier/actions
+[coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark-preset-prettier.svg
+[coverage]: https://codecov.io/github/remarkjs/remark-preset-prettier
+[downloads-badge]: https://img.shields.io/npm/dm/remark-preset-prettier.svg
+[downloads]: https://www.npmjs.com/package/remark-preset-prettier
+[size-badge]: https://img.shields.io/bundlephobia/minzip/remark-preset-prettier.svg
+[size]: https://bundlephobia.com/result?p=remark-preset-prettier
+[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
+[backers-badge]: https://opencollective.com/unified/backers/badge.svg
+[collective]: https://opencollective.com/unified
+[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg
+[chat]: https://github.com/remarkjs/remark/discussions
+[health]: https://github.com/remarkjs/.github
+[contributing]: https://github.com/remarkjs/.github/blob/HEAD/contributing.md
+[support]: https://github.com/remarkjs/.github/blob/HEAD/support.md
+[coc]: https://github.com/remarkjs/.github/blob/HEAD/code-of-conduct.md
+[typescript]: https://www.typescriptlang.org

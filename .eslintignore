@@ -1,4 +1,4 @@
-lib
 CHANGELOG.md
+/index.d.ts
 !/.github
 !/.*.js

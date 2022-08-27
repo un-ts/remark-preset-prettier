@@ -3,92 +3,65 @@
   "version": "1.0.2",
   "type": "module",
   "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
-  "repository": "git@github.com:remarkjs/remark-preset-prettier.git",
+  "repository": "git+https://github.com/remarkjs/remark-preset-prettier.git",
   "author": "JounQin <admin@1stg.me>",
-  "donate": {
-    "recipients": [
-      {
-        "name": "unts",
-        "platform": "opencollective",
-        "address": "https://opencollective.com/unts",
-        "weight": 60
-      },
-      {
-        "name": "rxts",
-        "platform": "opencollective",
-        "address": "https://opencollective.com/rxts",
-        "weight": 20
-      },
-      {
-        "name": "1stG",
-        "email": "i@1stg.me",
-        "weight": 20,
-        "platforms": [
-          {
-            "platform": "opencollective",
-            "address": "https://opencollective.com/1stG"
-          },
-          {
-            "platform": "patreon",
-            "address": "https://www.patreon.com/1stG"
-          }
-        ]
-      }
-    ]
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
   },
-  "funding": "https://opencollective.com/unified",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=14.8"
   },
-  "main": "lib/index.js",
+  "main": "index.js",
   "exports": {
-    "types": "./lib/index.d.ts",
-    "import": "./lib/index.js"
+    "types": "./index.d.ts",
+    "import": "./index.js"
   },
-  "types": "lib/index.d.ts",
+  "types": "index.d.ts",
   "files": [
-    "lib",
-    "!**/*.tsbuildinfo"
+    "index.d.ts",
+    "index.js"
+  ],
+  "keywords": [
+    "unified",
+    "remark",
+    "remark-plugin",
+    "plugin",
+    "remark-preset",
+    "markdown",
+    "prettier"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.lib.json",
+    "build": "rimraf *.d.ts && tsc -b && type-coverage",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
-    "lint:tsc": "tsc --noEmit",
+    "lint:tsc": "tsc --emitDeclarationOnly false --noEmit",
     "prelint": "yarn build",
-    "prepare": "patch-package && simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
-    "prerelease": "yarn build",
-    "release": "changeset publish",
+    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "typecov": "type-coverage"
   },
   "peerDependencies": {
     "prettier": ">=1.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^10.0.0",
-    "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.3",
-    "@types/node": "^18.7.3",
+    "@1stg/lib-config": "^10.2.1",
+    "@types/node": "^18.7.13",
     "@types/prettier": "^2.7.0",
-    "patch-package": "^6.4.7",
     "type-coverage": "^2.22.0",
-    "typescript": "^4.7.4",
-    "yarn-deduplicate": "^5.0.0"
+    "typescript": "^4.8.2",
+    "yarn-deduplicate": "^5.0.2"
   },
   "resolutions": {
+    "prettier": "^2.7.1",
     "remark-preset-prettier": "link:."
   },
+  "sideEffects": false,
   "typeCoverage": {
     "atLeast": 100,
     "cache": true,
     "detail": true,
-    "ignoreAsAssertion": true,
-    "ignoreCatch": true,
-    "ignoreFiles": [
-      "lib"
-    ],
     "showRelativePath": true,
     "strict": true,
     "update": true

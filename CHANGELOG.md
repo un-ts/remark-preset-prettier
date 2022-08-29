@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+### Major Changes
+
+- [`a66d9bd`](https://github.com/un-ts/remark-preset-prettier/commit/a66d9bdb20e3bc520f2489a6c98629b66c2cc135) Thanks [@JounQin](https://github.com/JounQin)! - feat!: use top level await and pure ESM
+
 ## 1.0.2
 
 ### Patch Changes

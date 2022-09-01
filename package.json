@@ -37,7 +37,7 @@
   "devDependencies": {
     "@1stg/lib-config": "^10.0.0",
     "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.3",
+    "@changesets/cli": "^2.24.4",
     "@types/node": "^18.7.3",
     "@types/prettier": "^2.7.0",
     "patch-package": "^6.4.7",

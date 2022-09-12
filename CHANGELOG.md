@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- [#105](https://github.com/un-ts/remark-preset-prettier/pull/105) [`926e39b`](https://github.com/un-ts/remark-preset-prettier/commit/926e39b3525ed585af3342173fae6ecc39196817) Thanks [@JounQin](https://github.com/JounQin)! - fix: should use `default` in exports for pure ESM
+
 ## 2.0.0
 
 ### Major Changes

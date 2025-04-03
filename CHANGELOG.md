@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.2
+
+### Patch Changes
+
+- [#175](https://github.com/un-ts/remark-preset-prettier/pull/175) [`36528e4`](https://github.com/un-ts/remark-preset-prettier/commit/36528e413a75f8c203919ca2f792fede4baa4193) Thanks [@JounQin](https://github.com/JounQin)! - chore: housekeeping, bump all (dev) deps
+
 ## 2.0.1
 
 ### Patch Changes

@@ -2,5 +2,8 @@
 *.tsbuildinfo
 .*cache
 .type-coverage
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
 lib
 node_modules

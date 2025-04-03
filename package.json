@@ -3,10 +3,10 @@
   "version": "2.0.1",
   "type": "module",
   "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
-  "repository": "git+https://@github.com/un-ts/remark-preset-prettier.git",
-  "author": "JounQin <admin@1stg.me>",
+  "repository": "https://@github.com/un-ts/remark-preset-prettier.git",
+  "author": "JounQin <admin@1stg.me> (https://www.1stG.me)",
   "license": "MIT",
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@4.8.1",
   "engines": {
     "node": ">=14.8"
   },
@@ -22,30 +22,38 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
-    "lint": "run-p lint:*",
-    "lint:es": "eslint . --cache -f friendly",
+    "format": "prettier --write .",
+    "lint": "yarn build && run-p 'lint:*'",
+    "lint:es": "eslint . --cache",
     "lint:ts": "tsc --noEmit",
-    "prelint": "yarn build",
-    "prepare": "patch-package && simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
-    "prerelease": "yarn build",
-    "release": "changeset publish",
+    "prepare": "simple-git-hooks && yarn-berry-deduplicate || exit 0",
+    "release": "yarn build && clean-pkg-json && changeset publish",
     "typecov": "type-coverage"
   },
   "peerDependencies": {
     "prettier": ">=1.0.0"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^10.2.1",
-    "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.4",
-    "@types/node": "^18.7.16",
-    "@types/prettier": "^2.7.0",
-    "patch-package": "^6.4.7",
-    "type-coverage": "^2.22.0",
-    "typescript": "^4.8.3",
-    "yarn-deduplicate": "^6.0.0"
+    "@1stg/common-config": "^11.1.2",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.28.1",
+    "@commitlint/cli": "^19.8.0",
+    "@types/node": "^22.14.0",
+    "clean-pkg-json": "^1.2.1",
+    "eslint": "^9.23.0",
+    "lint-staged": "^15.5.0",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "^3.5.3",
+    "simple-git-hooks": "^2.12.1",
+    "size-limit": "^11.2.0",
+    "size-limit-preset-node-lib": "^0.3.0",
+    "type-coverage": "^2.29.7",
+    "typescript": "^5.8.2",
+    "yarn-berry-deduplicate": "^6.1.1"
   },
   "resolutions": {
+    "es5-ext": "npm:@unes/es5-ext@latest",
+    "prettier": "^3.5.3",
     "remark-preset-prettier": "link:."
   },
   "typeCoverage": {

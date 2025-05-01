@@ -11,11 +11,11 @@
     "node": ">=14.8"
   },
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "exports": {
     "types": "./lib/index.d.ts",
     "default": "./lib/index.js"
   },
-  "types": "lib/index.d.ts",
   "files": [
     "lib",
     "!**/*.tsbuildinfo"
